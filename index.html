@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App with Timer</title>
+  <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+  <div class="quiz-container">
+    <h1>QUIZ APP</h1>
+    <button id="startBtn">Start Quiz</button>
+    <div id="quizContent" style="display: none;">
+      <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+      <div class="timer">Time left: <span id="timer">15</span> seconds</div>
+      <div class="timer-bar"><div class="timer-bar-fill" id="timerBarFill"></div></div>
+      <h2 id="question">Loading question...</h2>
+      <div>
+        <label class="option"><input type="radio" name="answer" value="a"> <span id="a_text"></span></label>
+        <label class="option"><input type="radio" name="answer" value="b"> <span id="b_text"></span></label>
+        <label class="option"><input type="radio" name="answer" value="c"> <span id="c_text"></span></label>
+        <label class="option"><input type="radio" name="answer" value="d"> <span id="d_text"></span></label>
+      </div>
+      <div class="explanation" id="explanation"></div>
+      <button id="submitBtn">Submit Answer</button>
+      <button id="nextBtn">Next Question</button>
+      <div class="result" id="result"></div>
+    </div>
+    
+  </div>
+  <script src="script.js"></script>
+ </body>
+ </html

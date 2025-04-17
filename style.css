@@ -1,0 +1,144 @@
+ * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .quiz-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .progress {
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    height: 10px;
+  }
+  
+  .progress-bar {
+    height: 10px;
+    background-color: #27ae60;
+    width: 0%;
+    transition: width 0.3s ease;
+  }
+  
+  .timer {
+    font-size: 0.95rem;
+    color: #e74c3c;
+    text-align: right;
+  }
+  
+  .timer-bar {
+    background: #eee;
+    height: 8px;
+    border-radius: 8px;
+    margin: 10px 0 20px 0;
+    overflow: hidden;
+  }
+  
+  .timer-bar-fill {
+    background-color: #e74c3c;
+    height: 100%;
+    width: 100%;
+    animation: countdown 15s linear forwards;
+  }
+  
+  @keyframes countdown {
+    from { width: 100%; }
+    to { width: 0%; }
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  .option {
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    margin: 12px 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .option:hover {
+    background-color: #d6e6f2;
+  }
+  
+  .option input {
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: #219150;
+  }
+  
+  .result, .explanation {
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  .explanation {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  #nextBtn {
+    display: none;
+  }
+  
+  @media (max-width: 600px) {
+    .quiz-container {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 1.3rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+    }
+  }
+  
